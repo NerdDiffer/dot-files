@@ -24,8 +24,8 @@ let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
 
 " When working with ES2015/ES6 or React, uncomment the following 2 lines:
-let g:jsx_ext_required = 0 " allow jsx in regular `.js` files
-let g:syntastic_javascript_checkers = ['eslint'] " use eslint 
+" let g:jsx_ext_required = 0 " allow jsx in regular `.js` files
+" let g:syntastic_javascript_checkers = ['eslint'] " use eslint
 
 " ------- Autocmd, Filetype -------
 source ./vim/autocmd.vim
