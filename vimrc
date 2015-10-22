@@ -8,8 +8,6 @@ source ./vim/vundles.vim
 let g:syntastic_check_on_open=1
 
 let g:indent_guides_size = 1
-" make Vim treat any .md file as Markdown instead of Modula-2
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " disable automatic folding in markdown files:
 " let g:vim_markdown_folding_disabled=1
 " automatically close javascript function curly-braces with { }
