@@ -1,0 +1,4 @@
+*.sw*
+
+# ignore vundle packages
+vim/bundle/

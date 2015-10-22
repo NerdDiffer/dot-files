@@ -1,0 +1,35 @@
+# some more ls aliases
+# alias ll='ls -alF'
+# alias la='ls -A'
+alias l='ls -CF'
+alias n.='nautilus .'
+
+# `cd`
+alias cdeg='cd ~/git'
+alias cddg='cd ~/Dropbox/git'
+alias cddj='cd ~/Documents/jobSearch'
+alias cdop='cd ~/git/odinProject/3_ruby-programming/3-ruby-on-the-web'
+alias cdit19='cd ~/git/clients/WFN/item19s/item19s-RoR'
+alias cd-re='cd ~/git/RE-com'
+
+# other commands
+alias funJS='functional-javascript-workshop'
+alias ssh-re='ssh -p 9137 rafael@104.236.189.179'
+
+# aliases for git
+alias gbr='git branch'
+alias gci='git commit'
+alias gco='git checkout'
+alias gst='git status'
+alias ga='git add'
+
+# default manjaro file aliases
+alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias grep='grep --color=tty -d skip'
+alias cp="cp -i"                      # confirm before overwriting something
+alias df='df -h'                      # human-readable sizes
+alias free='free -m'                  # show sizes in MB
+alias np='nano PKGBUILD'
+alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu  && sudo pacman -Suu'
