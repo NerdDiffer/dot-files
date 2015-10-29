@@ -26,7 +26,10 @@ set completeopt-=preview
 " let g:syntastic_javascript_checkers = ['eslint'] " use eslint
 
 " ------- Autocmd, Filetype -------
-source ./vim/autocmd.vim
+" Language-specific settings should load automatically as long as they are in
+" the `.vim/ftplugin/` directory. If not, then try putting all of them in the
+" following file:
+" source ./vim/autocmd.vim
 
 " ------- General configuration -------
 set t_Co=256     " enable 256 colors
