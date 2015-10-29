@@ -32,8 +32,6 @@ set completeopt-=preview
 " source ./vim/autocmd.vim
 
 " ------- General configuration -------
-set t_Co=256     " enable 256 colors
-set number       " line numbers
 set expandtab    " inserts a space whenever tab is pressed
 set laststatus=2 " make the last window always have a status line
 set shiftwidth=2 " num of space characters for indentation
