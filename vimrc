@@ -1,7 +1,7 @@
 set nocompatible " be iMproved, required. ensure vim, not vi
 
 " ------- Bundles -------
-source ./vim/vundles.vim
+source $HOME/.vim/vundles.vim
 
 " ------- Bundle options -------
 " lint the file on open, as well as save (lint on save is default)
@@ -29,7 +29,7 @@ set completeopt-=preview
 " Language-specific settings should load automatically as long as they are in
 " the `.vim/ftplugin/` directory. If not, then try putting all of them in the
 " following file:
-" source ./vim/autocmd.vim
+" source $HOME/.vim/autocmd.vim
 
 " ------- General configuration -------
 set expandtab    " inserts a space whenever tab is pressed
@@ -42,7 +42,7 @@ set textwidth=80 " max 80 characters before an automatic line break
 syntax on
 
 " ------- Looks -------
-source ./vim/ui.vim
+source $HOME/.vim/ui.vim
 
 " ------- Mappings -------
-source ./vim/mappings.vim
+source $HOME/.vim/mappings.vim
