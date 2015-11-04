@@ -1,5 +1,5 @@
 if [ -f /etc/bash_completion ]; then
-	    . /etc/bash_completion
+    . /etc/bash_completion
 fi
 
 xhost +local:root > /dev/null 2>&1
@@ -91,9 +91,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+BASH_ALIASES=$HOME/.dot-files/bash/bash_aliases
+if [ -f $BASH_ALIASES ]; then
+  . $BASH_ALIASES
 fi
 
 # use vim commands in the terminal
@@ -113,7 +113,7 @@ export PATH=/usr/local/heroku/bin:$PATH
 
 # Reference git auto completion file
 if [ -x /usr/bin/git ]; then
-  source ~/.git-completion.bash
+  source $HOME/.dot-files/misc/git-completion.bash
 fi
 
 export NVM_DIR="/home/rafael/.nvm"

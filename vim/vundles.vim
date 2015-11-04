@@ -47,7 +47,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'      " helps w/ indenting
-Plugin 'briancollins/vim-jst'         " jst/ejs syntax
 Plugin 'mxw/vim-jsx'                  " jsx (ReactJS)
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'vim-ruby/vim-ruby'

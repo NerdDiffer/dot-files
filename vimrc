@@ -1,7 +1,7 @@
 set nocompatible " be iMproved, required. ensure vim, not vi
 
 " ------- Bundles -------
-source vim/vundles.vim
+source $HOME/.dot-files/vim/vundles.vim
 
 " ------- Bundle options -------
 " lint the file on open, as well as save (lint on save is default)
@@ -21,15 +21,17 @@ nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
 let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
 
-" When working with ES2015/ES6 or React, uncomment the following 2 lines:
-" let g:jsx_ext_required = 0 " allow jsx in regular `.js` files
-" let g:syntastic_javascript_checkers = ['eslint'] " use eslint
-
 " ------- Autocmd, Filetype -------
 " Language-specific settings should load automatically as long as they are in
 " the `.vim/ftplugin/` directory. If not, then try putting all of them in the
 " following file:
-" source vim/autocmd.vim
+" source $HOME/.dot-files/vim/autocmd.vim
+
+" Use eslint as syntax checker when working with a .jsx file.
+" TODO: I'd like to be able to load this in './vim/ftplugin/javascript.vim', but
+" am not having much success. Putting it here works, though it is kind of a
+" duct tape solution.
+autocmd Filetype javascript.jsx let b:syntastic_checkers = ['eslint']
 
 " ------- General configuration -------
 set expandtab    " inserts a space whenever tab is pressed
@@ -42,7 +44,7 @@ set textwidth=80 " max 80 characters before an automatic line break
 syntax on
 
 " ------- Looks -------
-source vim/ui.vim
+source $HOME/.dot-files/vim/ui.vim
 
 " ------- Mappings -------
-source vim/mappings.vim
+source $HOME/.dot-files/vim/mappings.vim
