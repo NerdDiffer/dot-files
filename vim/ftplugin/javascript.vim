@@ -1,5 +1,5 @@
 " When working with React or .jsx files...
-autocmd BufNewFile,BufReadPost *.jsx let t:syntastic_javascript_checkers = ['eslint']
+autocmd Filetype javascript.jsx let b:syntastic_checkers = ['eslint']
 
 " Quick reference for variable scopes:
 " let g:variable - global
