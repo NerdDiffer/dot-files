@@ -96,25 +96,22 @@ if [ -f $BASH_ALIASES ]; then
   . $BASH_ALIASES
 fi
 
+# Reference git auto completion file
+if [ -x /usr/bin/git ]; then
+  source $HOME/.dot-files/git/git-completion.bash
+fi
+
 # use vim commands in the terminal
 set -o vi
 
-# nodejs lives here
-export PATH=$HOME/local/bin:$PATH
-# rbenv lives here
-export PATH=$HOME/.rbenv/bin:$PATH
+# PATH stuff
+export PATH=$HOME/local/bin:$PATH  # nodejs lives here
+export PATH=$HOME/.rbenv/bin:$PATH # rbenv lives here
+export PATH=/usr/local/heroku/bin:$PATH # heroku
+
 # rbenv: enable shims & autocompletion
 eval "$(rbenv init -)"
-# heroku
-export PATH=/usr/local/heroku/bin:$PATH
 
-# recommended for building ATOM text editor (though just for building)
-# export PYTHON=/usr/bin/python2
-
-# Reference git auto completion file
-if [ -x /usr/bin/git ]; then
-  source $HOME/.dot-files/misc/git-completion.bash
-fi
-
+# setup & load nvm
 export NVM_DIR="/home/rafael/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
