@@ -17,7 +17,18 @@ alias ga='git add'
 alias funJS='functional-javascript-workshop'
 alias ssh-re='ssh -p 9137 rafael@104.236.189.179'
 alias l='ls -CF'
-alias n.='nautilus .'
+# set `n.`, depending on the desktop environment
+case $XDG_CURRENT_DESKTOP in
+  GNOME)
+    alias n.='nautilus .'
+    ;;
+  XFCE)
+    alias n.='thunar .'
+    ;;
+  *)
+    echo "Set a value for 'n.' alias in your bash_alias file"
+    ;;
+esac
 
 # aliases provided with a fresh install of Manjaro
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'

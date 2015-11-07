@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#### What this script does:
+# Checks out git repository's master branch to a local directory.
+# With a little extra work, you can set it up so that it automatically deploys
+# when you push to this directory.
+
+#### How to use:
+# Place this script inside of your remote's git directory, at this location:
+# `hooks/post-receive`. You might want to change the referenced directories to
+# whatever your needs are.
+# When you're ready to go, change the permissions to executable:
+# `$ chmod +x post-receive`
+
+# Optionally, set the path to the deployment location of your dot-files and
+# of your 'local remote' repo directory:
+# DOT_FILES_WORK_TREE=/path/to/working/tree
+# DOT_FILES_GIT_DIR=/path/to/your/local/remote/repo
+DOT_FILES_WORK_TREE=${DOT_FILES_WORK_TREE:-$HOME/.dot-files/}
+DOT_FILES_GIT_DIR=${DOT_FILES_GIT_DIR:-$HOME/Dropbox/git/dot-files}
+
+git --work-tree=$DOT_FILES_WORK_TREE --git-dir=$DOT_FILES_GIT_DIR checkout -f

@@ -1,7 +1,11 @@
 set nocompatible " be iMproved, required. ensure vim, not vi
+syntax on
 
-" ------- Bundles -------
-source $HOME/.dot-files/vim/vundles.vim
+" DRY up the arguments to various calls to `source` in this file
+let s:source_file_directory = '$HOME/.dot-files/vim/'
+for fpath in split(globpath(s:source_file_directory, '*.vim'), '\n')
+  exe 'source' fpath
+endfor
 
 " ------- Bundle options -------
 " lint the file on open, as well as save (lint on save is default)
@@ -24,8 +28,7 @@ set completeopt-=preview
 " ------- Autocmd, Filetype -------
 " Language-specific settings should load automatically as long as they are in
 " the `.vim/ftplugin/` directory. If not, then try putting all of them in the
-" following file:
-" source $HOME/.dot-files/vim/autocmd.vim
+" following file: `$HOME/.dot-files/vim/autocmd.vim`
 
 " Use eslint as syntax checker when working with a .jsx file.
 " TODO: I'd like to be able to load this in './vim/ftplugin/javascript.vim', but
@@ -39,12 +42,3 @@ set laststatus=2 " make the last window always have a status line
 set shiftwidth=2 " num of space characters for indentation
 set tabstop=2    " num of spaces inserted when tab is pressed
 set textwidth=80 " max 80 characters before an automatic line break
-
-" ------- Syntax highlighting -------
-syntax on
-
-" ------- Looks -------
-source $HOME/.dot-files/vim/ui.vim
-
-" ------- Mappings -------
-source $HOME/.dot-files/vim/mappings.vim

@@ -96,9 +96,10 @@ if [ -f $BASH_ALIASES ]; then
   . $BASH_ALIASES
 fi
 
-# Reference git auto completion file
-if [ -x /usr/bin/git ]; then
-  source $HOME/.dot-files/git/git-completion.bash
+# Reference git auto-completion file
+GIT_COMPLETION_FILE=$HOME/.dot-files/git/git-completion.bash
+if [ -x /usr/bin/git && -f $GIT_COMPLETION_FILE ]; then
+  source $GIT_COMPLETION_FILE
 fi
 
 # use vim commands in the terminal
@@ -107,7 +108,7 @@ set -o vi
 # PATH stuff
 export PATH=$HOME/local/bin:$PATH  # nodejs lives here
 export PATH=$HOME/.rbenv/bin:$PATH # rbenv lives here
-export PATH=/usr/local/heroku/bin:$PATH # heroku
+export PATH=/usr/local/heroku/bin:$PATH # heroku stuff
 
 # rbenv: enable shims & autocompletion
 eval "$(rbenv init -)"
