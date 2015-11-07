@@ -98,7 +98,7 @@ fi
 
 # Reference git auto-completion file
 GIT_COMPLETION_FILE=$HOME/.dot-files/git/git-completion.bash
-if [ -x /usr/bin/git && -f $GIT_COMPLETION_FILE ]; then
+if [[ -x /usr/bin/git && -f $GIT_COMPLETION_FILE ]]; then
   source $GIT_COMPLETION_FILE
 fi
 

@@ -1,10 +1,13 @@
-# `cd`
+# Overwrite, mix & match your own bash aliases here...
+
+# quickly `cd` to common places
 alias cdeg='cd ~/git'
 alias cddg='cd ~/Dropbox/git'
 alias cddj='cd ~/Documents/jobSearch'
 alias cdop='cd ~/git/odinProject/3_ruby-programming/3-ruby-on-the-web'
 alias cdit19='cd ~/git/clients/WFN/item19s/item19s-RoR'
 alias cd-re='cd ~/git/RE-com'
+alias cdap='cd ~/git/tuts-books/coursera/algorithms-princeton/notes'
 
 # git aliases
 alias gbr='git branch'
@@ -15,7 +18,7 @@ alias ga='git add'
 
 # other commands
 alias funJS='functional-javascript-workshop'
-alias ssh-re='ssh -p 9137 rafael@104.236.189.179'
+alias ssh-re='. $HOME/.dot-files/bash/ssh-re'
 alias l='ls -CF'
 # set `n.`, depending on the desktop environment
 case $XDG_CURRENT_DESKTOP in
