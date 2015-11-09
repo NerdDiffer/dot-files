@@ -8,20 +8,13 @@ for fpath in split(globpath(s:source_file_directory, '*.vim'), '\n')
 endfor
 
 " ------- Bundle options -------
-" lint the file on open, as well as save (lint on save is default)
+" `syntastic`: lint the file on open, as well as save (lint on save is default)
 let g:syntastic_check_on_open=1
 
-let g:indent_guides_size = 1
-" disable automatic folding in markdown files:
-" let g:vim_markdown_folding_disabled=1
-" automatically close javascript function curly-braces with { }
-" maps Ctrl+c (while in insert mode) to a line-split
-" imap <C-c> <CR><Esc>0
-
-" Mapping .less to .css, lessc is required
+" `vim-less`: mapping .less to .css, lessc is required
 nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
-" optional tweaks for YouCompleteMe (cleans up default popups & splits)
+" `YouCompleteMe`: no popups & splits when presented with options
 let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
 
