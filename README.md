@@ -24,14 +24,27 @@ file in this repo named `post-receive`.
 Before modifying files, consider making a backup. Or just comment out what's
 there and then source the newly-deployed files.
 
+###### Vim
+
 I changed my local `~/.vimrc` to reference the deployed file:
 
-```vimscript
+```bash
 source $HOME/.dot-files/vimrc
 ```
+
+###### Bash
 
 Likewise for `~/.bashrc`:
 
 ```bash
 source $HOME/.dot-files/bashrc
+```
+
+###### Neovim
+
+The default user-local config file for Neovim is `$HOME/.config/nvim/init.vim`.
+Source the deployed file:
+
+```bash
+source $HOME/.dot-files/nvim-init.vim
 ```
