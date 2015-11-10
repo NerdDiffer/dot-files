@@ -55,7 +55,6 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree' " file explorer in tree format
 
 " All of your Plugins must be added before the following line:
 " comment out `call vundle#end()` when also commenting out `call vundle#begin()`

@@ -1,3 +1,5 @@
+# source this file from Bash's config file.
+
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi

@@ -8,7 +8,7 @@ I like the modularity of some of these github celebrity dot-file repos:
 * [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [bjeanes/dot-files](https://github.com/bjeanes/dot-files)
 
-## Automatic deployment
+## Deployment
 
 I set up the remote repo to automatically deploy the master branch to the
 working tree, `$HOME/.dot-files`, after a push. For reference, see the script
@@ -19,14 +19,14 @@ file in this repo named `post-receive`.
 * [automatic deployment with git](https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps)
 * [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 
-### Updating local files in `~`
+### Updating local config files
 
 Before modifying files, consider making a backup. Or just comment out what's
 there and then source the newly-deployed files.
 
 ###### Vim
 
-I changed my local `~/.vimrc` to reference the deployed file:
+Change your local `.vimrc` to reference the deployed file:
 
 ```bash
 source $HOME/.dot-files/vimrc
@@ -34,7 +34,7 @@ source $HOME/.dot-files/vimrc
 
 ###### Bash
 
-Likewise for `~/.bashrc`:
+Likewise for your `.bashrc` file:
 
 ```bash
 source $HOME/.dot-files/bashrc

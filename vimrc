@@ -1,3 +1,5 @@
+" source this file from Vim's config file.
+
 set nocompatible " be iMproved, required. ensure vim, not vi
 syntax on
 
