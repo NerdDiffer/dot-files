@@ -1,5 +1,7 @@
 # source this file from Bash's config file.
 
+DOT_FILES_DIR=$HOME/.dot-files
+
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
@@ -93,14 +95,16 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-BASH_ALIASES=$HOME/.dot-files/bash/bash_aliases
+BASH_ALIASES=$DOT_FILES_DIR/bash/bash_aliases
 if [ -f $BASH_ALIASES ]; then
   . $BASH_ALIASES
 fi
 
 # Reference git auto-completion file
-GIT_COMPLETION_FILE=$HOME/.dot-files/git/git-completion.bash
-if [[ -x /usr/bin/git && -f $GIT_COMPLETION_FILE ]]; then
+GIT_COMPLETION_FILE=$DOT_FILES_DIR/git/git-completion.bash
+if [[ -x /usr/bin/git && !(-f $GIT_COMPLETION_FILE) ]]; then
+  mkdir $DOT_FILES_DIR/git/
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o $GIT_COMPLETION_FILE
   source $GIT_COMPLETION_FILE
 fi
 

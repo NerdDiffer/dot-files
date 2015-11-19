@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # Add an extra layer of security to SSH access by prompting for port number
-echo "enter the port:"
-read -s PORT_NUM
-ssh -p $PORT_NUM rafael@104.236.189.179
+ssh_re() {
+  echo "enter the port:"
+  read -s PORT_NUM
+  ssh -p $PORT_NUM rafael@104.236.189.179
+}
+
+ssh_re
