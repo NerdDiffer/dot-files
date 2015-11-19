@@ -97,15 +97,21 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 BASH_ALIASES=$DOT_FILES_DIR/bash/bash_aliases
 if [ -f $BASH_ALIASES ]; then
-  . $BASH_ALIASES
+  source $BASH_ALIASES
 fi
 
 # Reference git auto-completion file
-GIT_COMPLETION_FILE=$DOT_FILES_DIR/git/git-completion.bash
-if [[ -x /usr/bin/git && !(-f $GIT_COMPLETION_FILE) ]]; then
-  mkdir $DOT_FILES_DIR/git/
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o $GIT_COMPLETION_FILE
-  source $GIT_COMPLETION_FILE
+if [[ -x /usr/bin/git  ]]; then
+  GIT_COMPLETION_FILE=$DOT_FILES_DIR/git/git-completion.bash
+
+  if [[ ! ( -f $GIT_COMPLETION_FILE ) ]]; then
+    mkdir $DOT_FILES_DIR/git/
+    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o $GIT_COMPLETION_FILE
+  fi
+
+  if [[ -f $GIT_COMPLETION_FILE ]]; then
+    source $GIT_COMPLETION_FILE
+  fi
 fi
 
 # use vim commands in the terminal
