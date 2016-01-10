@@ -39,12 +39,15 @@ Plugin 'gmarik/Vundle.vim'
 " "
 " " see :h vundle for more details or wiki for FAQ
 
+" Syntax, formatting & auto-completion bundles
 Plugin 'scrooloose/syntastic'
 Plugin 'nathanaelkane/vim-indent-guides' " more indenting help
 Plugin 'godlygeek/tabular'
 Plugin 'Raimondi/delimitMate'         " auto-add closing quotes, brackets, etc
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
+
+" Language bundles
+Plugin 'ternjs/tern_for_vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'      " helps w/ indenting
 Plugin 'mxw/vim-jsx'                  " jsx (ReactJS)
@@ -53,6 +56,8 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
+
+" Color bundles
 Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
 

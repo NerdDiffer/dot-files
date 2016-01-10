@@ -1,3 +1,6 @@
 #
 # ~/.bash_profile
 #
+
+BASHRC=$HOME/.bashrc
+[[ -f $BASHRC ]] && . $BASHRC

@@ -37,3 +37,4 @@ set laststatus=2 " make the last window always have a status line
 set shiftwidth=2 " num of space characters for indentation
 set tabstop=2    " num of spaces inserted when tab is pressed
 set textwidth=80 " max 80 characters before an automatic line break
+set splitright   " vsplit will put a new buffer on the right side
