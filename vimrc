@@ -20,6 +20,10 @@ nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
 let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
 
+" Session management
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
+
 " ------- Autocmd, Filetype -------
 " Language-specific settings should load automatically as long as they are in
 " the `.vim/ftplugin/` directory. If not, then try putting all of them in the

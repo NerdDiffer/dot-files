@@ -9,3 +9,6 @@ colorscheme SlateDark
 " Lines taken from: `https://github.com/rtomayko/dotfiles/blob/rtomayko/.vimrc`
 set list listchars=trail:.,tab:>.
 highlight SpecialKey ctermfg=White ctermbg=Black
+
+set colorcolumn=81
+highlight ColorColumn ctermbg=0 guibg=lightgrey

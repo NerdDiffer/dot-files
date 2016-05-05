@@ -56,6 +56,9 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
+Plugin 'rust-lang/rust.vim'
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
 
 " Color bundles
 Plugin 'flazz/vim-colorschemes'
