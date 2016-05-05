@@ -12,11 +12,24 @@
 # When you're ready to go, change the permissions to executable:
 # `$ chmod +x post-receive`
 
-# Optionally, set the path to the deployment location of your dot-files and
+#### Optional variables, uncomment & assign values at will
+# Set the path to the deployment location of your dot-files and
 # of your 'local remote' repo directory:
 # DOT_FILES_WORK_TREE=/path/to/working/tree
 # DOT_FILES_GIT_DIR=/path/to/your/local/remote/repo
+
+# Deploy a device-specific branch
+# BRANCH=$HOSTNAME
+#### end options
+
 DOT_FILES_WORK_TREE=${DOT_FILES_WORK_TREE:-$HOME/.dot-files/}
 DOT_FILES_GIT_DIR=${DOT_FILES_GIT_DIR:-$HOME/Dropbox/git/dot-files}
+BRANCH=${BRANCH:-'master'}
 
-git --work-tree=$DOT_FILES_WORK_TREE --git-dir=$DOT_FILES_GIT_DIR checkout -f
+args="--work-tree=$DOT_FILES_WORK_TREE
+--git-dir=$DOT_FILES_GIT_DIR
+checkout -f $BRANCH"
+
+echo $args
+
+git $args

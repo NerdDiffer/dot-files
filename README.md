@@ -12,7 +12,7 @@ I like the modularity of some of these github celebrity dot-file repos:
 
 I set up the remote repo to automatically deploy the master branch to the
 working tree, `$HOME/.dot-files`, after a push. For reference, see the script
-file in this repo named `post-receive`.
+file in this repo at `git/post-receive`.
 
 ##### Helpful Links
 

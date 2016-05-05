@@ -100,19 +100,8 @@ if [ -f $BASH_ALIASES ]; then
   source $BASH_ALIASES
 fi
 
-# Reference git auto-completion file
-if [[ -x /usr/bin/git  ]]; then
-  GIT_COMPLETION_FILE=$DOT_FILES_DIR/git/git-completion.bash
-
-  if [[ ! ( -f $GIT_COMPLETION_FILE ) ]]; then
-    mkdir $DOT_FILES_DIR/git/
-    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o $GIT_COMPLETION_FILE
-  fi
-
-  if [[ -f $GIT_COMPLETION_FILE ]]; then
-    source $GIT_COMPLETION_FILE
-  fi
-fi
+# git stuff
+source $DOT_FILES_DIR/git/git-stuff.sh
 
 # use vim commands in the terminal
 set -o vi
