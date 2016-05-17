@@ -1,0 +1,19 @@
+[user]
+  name = Rafael Espinoza
+  email = rafael@rafaelespinoza.com
+[color]
+  ui = true
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  fe = fetch
+  st = status
+  un = reset HEAD --
+  uh = reset HEAD^ --
+[push]
+  default = simple
+[core]
+  autocrlf = input
+  safecrlf = true
+  excludesFile = /home/rafael/.gitignore_global

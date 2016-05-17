@@ -1,0 +1,9 @@
+// http://jshint.com/docs/options/
+
+{
+  // when set to true, suppresses warnings about comma-first style.
+  "laxcomma": true,
+  // when set to true, suppresses warnings about using [] notation
+  // in places where object properties can also be expressed with dot notation.
+  "sub": true
+}
