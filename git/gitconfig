@@ -16,4 +16,5 @@
 [core]
   autocrlf = input
   safecrlf = true
+  editor = vim
   excludesFile = /home/rafael/.gitignore_global
