@@ -1,4 +1,4 @@
 *.sw*
 
 # ignore vundle packages
-vim/bundle/
+editors/vim/bundle/
