@@ -8,7 +8,7 @@ colorscheme SlateDark
 " Highlight trailing whitespace with ... in black background.
 " Lines taken from: `https://github.com/rtomayko/dotfiles/blob/rtomayko/.vimrc`
 set list listchars=trail:.,tab:>.
-highlight SpecialKey ctermfg=White ctermbg=Black
+highlight SpecialKey ctermfg=Black ctermbg=White
 
 set colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=lightgrey

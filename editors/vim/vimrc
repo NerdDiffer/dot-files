@@ -34,6 +34,9 @@ let g:session_autoload = 'no'
 " am not having much success. Putting it here works, though it is kind of a
 " duct tape solution.
 autocmd Filetype javascript.jsx let b:syntastic_checkers = ['eslint']
+autocmd Filetype javascript let g:syntastic_javascript_checkers = ['eslint']
+" Allow JSX in normal JS files
+autocmd Filetype javascript let g:jsx_ext_required = 0
 
 " ------- General configuration -------
 set expandtab    " inserts a space whenever tab is pressed
@@ -42,3 +45,9 @@ set shiftwidth=2 " num of space characters for indentation
 set tabstop=2    " num of spaces inserted when tab is pressed
 set textwidth=80 " max 80 characters before an automatic line break
 set splitright   " vsplit will put a new buffer on the right side
+
+" ------- Project-specific configuration -------
+set exrc " allow project-specific configuration
+" disable unsafe commands in project-specific `.vimrc`.
+" (prevents commands from being run inside file unless it's owned by you.)
+set secure
