@@ -1,20 +1,10 @@
 # Overwrite, mix & match your own bash aliases here...
 
 # quickly `cd` to common places
-alias cd.eg='cd ~/git'
-alias cd.dg='cd ~/Dropbox/git'
-alias cd.js='cd ~/Documents/jobSearch'
-alias cd.re='cd ~/git/RE-com'
-alias cd.ap='cd ~/git/tuts-books/coursera/algorithms-princeton/notes'
-alias cd.hr='cd ~/git/HackReactor/'
-alias cd.t='cd ~/git/HackReactor/thesis'
-alias cd.bs='cd ~/git/misc/BeatSequencer'
-alias cd.tr='cd ~/git/misc/examples/TR808'
-alias cd.ts='cd ~/git/tone-studio'
-alias cd.tuts='cd ~/git/tuts-books'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
+alias .....='cd ../../../../'
 
 # git aliases
 alias gbr='git branch'
@@ -30,19 +20,6 @@ alias c='clear'
 alias diff='colordiff'
 alias ssh.cb='ssh ec2-user@52.53.153.201'
 # alias ping='ping -c 3'
-
-# set `n.`, depending on the desktop environment
-case $XDG_CURRENT_DESKTOP in
-  GNOME)
-    alias n.='nautilus . &'
-    ;;
-  XFCE)
-    alias n.='thunar . &'
-    ;;
-  *)
-    echo "Set a value for 'n.' alias in your bash_alias file"
-    ;;
-esac
 
 # aliases provided with a fresh install of Manjaro
 alias l='ls -CF'
