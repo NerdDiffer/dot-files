@@ -46,6 +46,11 @@ Plugin 'godlygeek/tabular'
 Plugin 'Raimondi/delimitMate'         " auto-add closing quotes, brackets, etc
 Plugin 'Valloric/YouCompleteMe'
 
+" Utilitarian bundles
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
+Plugin 'majutsushi/tagbar'
+
 " Language bundles
 Plugin 'ternjs/tern_for_vim'
 Plugin 'jelera/vim-javascript-syntax'
@@ -57,8 +62,10 @@ Plugin 'tpope/vim-rails'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
 Plugin 'rust-lang/rust.vim'
-Plugin 'xolox/vim-session'
-Plugin 'xolox/vim-misc'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'fatih/vim-go'
+Plugin 'nsf/gocode'
+Plugin 'dgryski/vim-godef'
 
 " Color bundles
 Plugin 'flazz/vim-colorschemes'

@@ -4,7 +4,7 @@ set nocompatible " be iMproved, required. ensure vim, not vi
 syntax on
 
 " DRY up the arguments to various calls to `source` in this file
-let s:source_file_directory = '$HOME/.dot-files/vim/'
+let s:source_file_directory = '/home/rafael/git/dot-files/editors/vim/'
 for fpath in split(globpath(s:source_file_directory, '*.vim'), '\n')
   exe 'source' fpath
 endfor
@@ -27,16 +27,18 @@ let g:session_autoload = 'no'
 " ------- Autocmd, Filetype -------
 " Language-specific settings should load automatically as long as they are in
 " the `.vim/ftplugin/` directory. If not, then try putting all of them in the
-" following file: `$HOME/.dot-files/vim/autocmd.vim`
+" following file: `<PATH_TO_DOT_FILES_ROOT>/vim/autocmd.vim`
 
 " Use eslint as syntax checker when working with a .jsx file.
 " TODO: I'd like to be able to load this in './vim/ftplugin/javascript.vim', but
 " am not having much success. Putting it here works, though it is kind of a
 " duct tape solution.
-autocmd Filetype javascript.jsx let b:syntastic_checkers = ['eslint']
-autocmd Filetype javascript let g:syntastic_javascript_checkers = ['eslint']
+autocmd FileType javascript.jsx let b:syntastic_checkers = ['eslint']
+autocmd FileType javascript.jsx let g:syntastic_javascript_checkers = ['eslint']
+autocmd FileType javascript let b:syntastic_checkers = ['eslint']
+autocmd FileType javascript let g:syntastic_javascript_checkers = ['eslint']
 " Allow JSX in normal JS files
-autocmd Filetype javascript let g:jsx_ext_required = 0
+autocmd FileType javascript let g:jsx_ext_required = 0
 
 " ------- General configuration -------
 set expandtab    " inserts a space whenever tab is pressed

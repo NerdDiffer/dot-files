@@ -2,8 +2,9 @@
 
 set t_Co=256          " enable 256 colors
 set number            " line numbers
+set relativenumber
 set background=dark
-colorscheme SlateDark
+colorscheme flattown " SlateDark, flattown
 
 " Highlight trailing whitespace with ... in black background.
 " Lines taken from: `https://github.com/rtomayko/dotfiles/blob/rtomayko/.vimrc`
