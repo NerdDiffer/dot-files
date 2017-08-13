@@ -1,3 +1,0 @@
-[submodule "zsh"]
-	path = shells/zsh
-	url = git@github.com:NerdDiffer/zshrc.git

@@ -13,7 +13,7 @@ DOTFILES_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DOTFILES_SHELLS=$DOTFILES_ROOT/shells
 ln -sfv "$DOTFILES_SHELLS/bash/bash_profile" $HOME/.bash_profile
 ln -sfv "$DOTFILES_SHELLS/bash/bashrc" $HOME/.bashrc
-ln -sfv "$DOTFILES_SHELLS/zsh/zshrc" $HOME/.zshrc
+ln -sfv "$HOME/.zsh/zshrc" $HOME/.zshrc
 
 # Git
 DOTFILES_GIT=$DOTFILES_ROOT/git
